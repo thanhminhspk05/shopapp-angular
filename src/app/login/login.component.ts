@@ -20,7 +20,6 @@ export class LoginComponent {
     const loginDTO: LoginDTO = {
       phone_number: this.phoneNumber,
       password: this.password,
-      role_id: 1,
     };
     this.userService.login(loginDTO);
   }
