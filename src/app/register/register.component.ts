@@ -11,7 +11,7 @@ import { UserService } from "./../services/user.service";
 export class RegisterComponent {
   @ViewChild("registerForm") registerForm!: NgForm;
 
-  phone: string;
+  phoneNumber: string;
   password: string;
   retypePassword: string;
   fullName: string;
@@ -20,7 +20,7 @@ export class RegisterComponent {
   dateOfBirth: Date;
 
   constructor(private userService: UserService) {
-    this.phone = "";
+    this.phoneNumber = "";
     this.password = "";
     this.retypePassword = "";
     this.fullName = "";
@@ -33,7 +33,7 @@ export class RegisterComponent {
   register() {
     const registerData: RegisterDTO = {
       fullname: this.fullName,
-      phone_number: this.phone,
+      phone_number: this.phoneNumber,
       address: this.address,
       password: this.password,
       retype_password: this.retypePassword,
